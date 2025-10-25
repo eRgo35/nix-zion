@@ -8,7 +8,7 @@
     nnn
     zellij
     vscodium
-    firefox
+    firefox-bin
     discord
     signal-desktop-bin
     spotify
