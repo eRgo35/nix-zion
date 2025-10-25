@@ -1,11 +1,11 @@
-{
+{...}: let
+  aliases = import ../configs/aliases.nix;
+in {
   programs.nushell = {
     enable = true;
-
-    shellAliases = {
-      vi = "hx";
-      vim = "hx";
-      nano = "hx";
+    shellAliases = aliases;
+    settings = {
+      show_banner = false;
     };
   };
 
