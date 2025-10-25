@@ -1,9 +1,10 @@
-{
+{pkgs, ...}: {
   nixpkgs.config.cudaSupport = true;
 
   services.ollama = {
     enable = true;
     acceleration = "cuda";
+    package = pkgs.unstable.ollama;
   };
 
   # services.open-webui = {

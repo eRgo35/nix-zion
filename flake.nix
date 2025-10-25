@@ -4,6 +4,7 @@
   inputs = {
     # nixpkgs
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # home manager
     home-manager.url = "github:nix-community/home-manager/release-25.05";
@@ -15,15 +16,30 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     ...
   } @ inputs: let
     inherit (self) outputs;
+    # When applied, the unstable nixpkgs set (declared in the flake inputs) will
+    # be accessible through 'pkgs.unstable'
+    unstable-packages = final: _prev: {
+      unstable = import inputs.nixpkgs-unstable {
+        system = final.system;
+        config.allowUnfree = true;
+      };
+    };
   in {
     nixosConfigurations = {
       zion = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
+          {
+            nixpkgs.overlays = [
+              unstable-packages
+            ];
+          }
+
           ./nixos/configuration.nix
 
           home-manager.nixosModules.home-manager
