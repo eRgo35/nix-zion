@@ -7,6 +7,7 @@
     # programs
     nnn
     zellij
+    vscodium
 
     # editors
     vim
