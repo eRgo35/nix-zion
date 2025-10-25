@@ -12,6 +12,8 @@
     ./hardware-configuration.nix
 
     ./modules/adb.nix
+    ./modules/cuda.nix
+    ./modules/development.nix
     ./modules/gnupg.nix
     ./modules/nh.nix
     ./modules/nvidia.nix

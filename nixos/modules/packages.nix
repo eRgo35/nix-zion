@@ -10,6 +10,8 @@
     vscodium
     firefox
     discord
+    signal-desktop-bin
+    spotify
 
     # editors
     vim
