@@ -1,13 +1,14 @@
 {pkgs, ...}: {
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-    # List packages installed in system profile. To search, run:
+  # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     # programs
     nnn
     zellij
     vscodium
+    firefox
 
     # editors
     vim
