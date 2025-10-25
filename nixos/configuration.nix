@@ -19,6 +19,7 @@
     ./modules/nvidia.nix
     ./modules/packages.nix
     ./modules/ssh.nix
+    ./modules/swap.nix
     ./modules/users.nix
   ];
 
