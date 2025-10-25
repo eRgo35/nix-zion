@@ -4,6 +4,6 @@
     isNormalUser = true;
     description = "Michał Czyż";
     extraGroups = ["networkmanager" "wheel" "docker"];
-    shell = pkgs.nushell;
+    # shell = pkgs.nushell;
   };
 }
