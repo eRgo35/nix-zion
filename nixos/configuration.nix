@@ -14,6 +14,7 @@
     ./modules/adb.nix
     ./modules/gnupg.nix
     ./modules/nh.nix
+    ./modules/nvidia.nix
     ./modules/packages.nix
     ./modules/ssh.nix
     ./modules/users.nix
