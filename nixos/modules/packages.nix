@@ -9,6 +9,7 @@
     zellij
     vscodium
     firefox
+    discord
 
     # editors
     vim
@@ -59,6 +60,7 @@
     nix-output-monitor
     alejandra
     nixd
+    nil
     direnv
   ];
 }
