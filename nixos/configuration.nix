@@ -12,6 +12,7 @@
     ./modules/gnupg.nix
     ./modules/nh.nix
     ./modules/nvidia.nix
+    ./modules/ollama.nix
     ./modules/packages.nix
     ./modules/ssh.nix
     ./modules/swap.nix
