@@ -16,13 +16,16 @@
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-amd"];
   boot.extraModulePackages = [];
+  boot.kernelParams = ["resume_offset=8255488"];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Hibernation
-  boot.resumeDevice = "/var/lib/swapfile";
+  boot.resumeDevice = "/dev/disk/by-uuid/10c21e20-c559-4704-a643-99aeb8f1f6b6";
+
+  powerManagement.enable = true;
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/10c21e20-c559-4704-a643-99aeb8f1f6b6";
