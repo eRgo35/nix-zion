@@ -9,6 +9,8 @@
     };
   };
 
-  carapace.enable = true;
-  carapace.enableNushellIntegration = true;
+  programs.carapace = {
+    enable = true;
+    enableNushellIntegration = true;
+  };
 }
