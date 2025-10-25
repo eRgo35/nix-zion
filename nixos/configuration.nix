@@ -16,6 +16,7 @@
     ./modules/nh.nix
     ./modules/packages.nix
     ./modules/ssh.nix
+    ./modules/users.nix
   ];
 
   networking.hostName = "zion"; # Define your hostname.
