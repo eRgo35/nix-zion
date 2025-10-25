@@ -22,7 +22,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Hibernation
-  boot.resumeDevice = "/swapfile";
+  boot.resumeDevice = "/var/lib/swapfile";
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/10c21e20-c559-4704-a643-99aeb8f1f6b6";
