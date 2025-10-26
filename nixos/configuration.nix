@@ -17,6 +17,7 @@
     ./modules/ssh.nix
     ./modules/swap.nix
     ./modules/users.nix
+    ./modules/wireguard.nix
   ];
 
   networking.hostName = "zion"; # Define your hostname.
