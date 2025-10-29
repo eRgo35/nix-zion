@@ -4,16 +4,34 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # programs
-    nnn
-    zellij
-    vscodium
-    firefox-bin
+    # social
     discord
     signal-desktop-bin
+    kotatogram-desktop
+
+    # web
+    google-chrome
+    firefox-bin
+
+    # tools
+    nnn
+    zellij
+    libreoffice
+    seahorse
+
+    # media
     spotify
+    vlc
+    mpv
+    obs-studio
+
+    # ide
+    android-studio
 
     # editors
+    obsidian
+    zed-editor
+    vscodium
     vim
     neovim
 
@@ -35,8 +53,10 @@
     iotop
     iftop
     tldr
+    killall
     gnupg
     wireguard-tools
+    wol
 
     # system call monitoring
     strace
