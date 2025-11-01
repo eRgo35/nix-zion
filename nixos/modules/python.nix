@@ -16,6 +16,9 @@
         numpy
         pandas
         seaborn
+
+        pip
+        virtualenv
       ]))
     cudaPackages.cudatoolkit
   ];
