@@ -9,9 +9,11 @@
     block = ["fakenews" "gambling" "porn" "social"];
   };
 
-  networking.extraHosts = "
-    0.0.0.0 youtube.com
-  ";
+  networking.hosts = {
+    "0.0.0.0" = [
+      "youtube.com"
+    ];
+  };
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [22];
