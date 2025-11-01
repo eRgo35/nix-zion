@@ -9,6 +9,7 @@
   gp = "git pull";
   up = "docker compose up";
   down = "docker compose down";
+  pull = "docker compose pull";
   logs = "docker compose logs";
   dps = "docker compose ps";
 }
