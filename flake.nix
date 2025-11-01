@@ -1,5 +1,5 @@
 {
-  description = "Zion NixOS flake";
+  description = "Desktop NixOS flake";
 
   inputs = {
     # nixpkgs
