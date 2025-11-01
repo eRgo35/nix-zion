@@ -9,8 +9,6 @@
     # home manager
     home-manager.url = "github:nix-community/home-manager/release-25.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    # helix.url = "github:helix-editor/helix/master";
   };
 
   outputs = {
@@ -29,27 +27,37 @@
         config.allowUnfree = true;
       };
     };
+
+    commonModules = [
+      {
+        nixpkgs.overlays = [unstable-packages];
+      }
+      home-manager.nixosModules.home-manager
+      {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+
+        home-manager.users.mike = import ./home-manager/home.nix;
+      }
+    ];
   in {
     nixosConfigurations = {
       zion = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [
-          {
-            nixpkgs.overlays = [
-              unstable-packages
-            ];
-          }
+        modules =
+          commonModules
+          ++ [
+            ./nixos/zion.nix
+          ];
+      };
 
-          ./nixos/configuration.nix
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.mike = import ./home-manager/home.nix;
-          }
-        ];
+      thor = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules =
+          commonModules
+          ++ [
+            ./nixos/thor.nix
+          ];
       };
     };
   };

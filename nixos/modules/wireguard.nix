@@ -1,13 +1,18 @@
-{
+{config, ...}: let
+  wgAddresses = {
+    zion = "192.168.200.2/32";
+    thor = "192.168.200.3/32";
+  };
+in {
   networking.wg-quick.interfaces = {
     wg0 = {
       address = [
-        "192.168.200.2/32"
+        wgAddresses.${config.networking.hostName} or null
       ];
 
       dns = ["192.168.200.1"];
 
-      privateKeyFile = "/home/mike/.nixos/secrets/wireguard-keys/zion.key";
+      privateKeyFile = "/home/mike/.nixos/secrets/wireguard-keys/${config.networking.hostName}.key";
 
       peers = [
         {
