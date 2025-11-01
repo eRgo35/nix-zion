@@ -3,7 +3,7 @@
   users.users.mike = {
     isNormalUser = true;
     description = "Michał Czyż";
-    extraGroups = ["networkmanager" "wheel" "docker"];
+    extraGroups = ["networkmanager" "wheel" "docker" "video"];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINBehbdWBTyhs8Tqnc7w172XhWcPAcAM6BC9Gny3i8An mike@zion"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO3xXO97oTwDMQhwlDcgeRgo+05urrSaKv/bvqvH2Wus mike@thor"
