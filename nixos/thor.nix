@@ -21,7 +21,6 @@
     # ./modules/ollama.nix
     ./modules/packages.nix
     ./modules/printing.nix
-    # ./modules/python.nix
     ./modules/ssh.nix
     # ./modules/swap.nix
     ./modules/users.nix

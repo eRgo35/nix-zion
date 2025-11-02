@@ -13,7 +13,6 @@
     ./modules/nh.nix
     ./modules/nvidia.nix
     ./modules/ollama.nix
-    ./modules/python.nix
     ./modules/zerotier.nix
 
     ./server/packages.nix

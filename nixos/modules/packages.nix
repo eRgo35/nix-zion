@@ -35,7 +35,8 @@
     # editors
     obsidian
     zed-editor
-    vscodium
+    # vscodium
+    vscode
     vim
     neovim
 
