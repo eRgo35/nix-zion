@@ -3,6 +3,7 @@
     ./programs/bash.nix
     ./programs/git.nix
     ./programs/nushell.nix
+    ./programs/ssh.nix
     ./programs/starship.nix
   ];
 
