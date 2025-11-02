@@ -1,5 +1,5 @@
 {
-  description = "Desktop NixOS flake";
+  description = "NixOS flake";
 
   inputs = {
     # nixpkgs
@@ -69,6 +69,15 @@
           commonModules
           ++ [
             ./nixos/freya.nix
+          ];
+      };
+
+      ragnarok = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules =
+          commonModules
+          ++ [
+            ./nixos/ragnarok.nix
           ];
       };
     };

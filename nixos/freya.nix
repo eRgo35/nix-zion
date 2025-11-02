@@ -15,12 +15,12 @@
     ./server/bind.nix
     ./server/git.nix
     ./server/gnupg.nix
+    ./server/networking.nix
     ./server/packages.nix
     ./server/ssh.nix
     ./server/users.nix
     ./server/wireguard.nix
   ];
 
-  networking.firewall.allowedTCPPorts = [22];
   networking.hostName = "freya"; # Define your hostname.
 }
