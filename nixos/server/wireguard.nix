@@ -53,13 +53,6 @@
             "192.168.200.4/32"
           ];
         }
-	{
-          # vfly
-          publicKey = "yOadf/mDjmyyU2hs5Ufb+sQFzU6PYCzBCJKg1/Bd/EU=";
-          allowedIPs = [
-            "192.168.200.5/32" 
-          ];
-        }
       ];
     };
   };
