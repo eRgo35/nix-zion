@@ -29,11 +29,5 @@
         identityFile = "~/.ssh/id_ed25519";
       };
     };
-
-    extraConfig = ''
-      # Common settings for all hosts
-      ServerAliveInterval 60
-      ServerAliveCountMax 3
-    '';
   };
 }

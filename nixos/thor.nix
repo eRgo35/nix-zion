@@ -9,6 +9,7 @@
     ./common/cache.nix
     ./common/locale.nix
     ./common/networking.nix
+    ./common/security.nix
     ./common/system.nix
 
     # Active modules

@@ -62,6 +62,15 @@
             ./nixos/thor.nix
           ];
       };
+
+      freya = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules =
+          commonModules
+          ++ [
+            ./nixos/freya.nix
+          ];
+      };
     };
   };
 }
