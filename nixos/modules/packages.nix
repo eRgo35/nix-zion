@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   # List packages installed in system profile. To search, run:
@@ -84,5 +88,7 @@
     nixd
     nil
     direnv
+
+    inputs.nix-alien.packages.${system}.nix-alien
   ];
 }
