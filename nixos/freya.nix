@@ -4,6 +4,7 @@
     ./hardware/freya.nix
 
     ./common/audio.nix
+    ./common/cache.nix
     ./common/locale.nix
     ./common/system.nix
 
