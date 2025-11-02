@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   boot = {
     kernelModules = ["nvidia" "nvidia-uvm"];
     kernelParams = ["nvidia-drm.fbdev=1" "nvidia-drm.modeset=1"];
@@ -22,4 +22,9 @@
   };
 
   services.xserver.videoDrivers = ["nvidia" "modesetting"];
+
+  environment.systemPackages = with pkgs; [
+    cudatoolkit
+    cudaPackages.cudnn
+  ];
 }
