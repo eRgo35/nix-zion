@@ -15,6 +15,7 @@
     ./modules/nh.nix
     ./modules/nvidia.nix
     ./modules/ollama.nix
+    ./modules/wireguard.nix
     ./modules/zerotier.nix
 
     ./server/packages.nix
