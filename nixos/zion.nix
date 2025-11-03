@@ -12,15 +12,18 @@
     ./common/security.nix
     ./common/system.nix
 
+    ./desktop/packages.nix
+
+    ./development/development.nix
+    ./development/python.nix
+
     # Active modules
     ./modules/adb.nix
     ./modules/docker.nix
-    ./modules/development.nix
     ./modules/gnupg.nix
     ./modules/nh.nix
     ./modules/nvidia.nix
     ./modules/ollama.nix
-    ./modules/packages.nix
     ./modules/printing.nix
     ./modules/ssh.nix
     ./modules/swap.nix

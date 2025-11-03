@@ -8,7 +8,9 @@
     ./common/locale.nix
     ./common/system.nix
 
-    ./modules/development.nix
+    ./development/development.nix
+    ./development/python.nix
+
     ./modules/docker.nix
     ./modules/nh.nix
     ./modules/nvidia.nix
