@@ -23,6 +23,11 @@
         identityFile = "~/.ssh/id_ed25519";
       };
 
+      "ragnarok" = {
+        hostname = "192.168.200.5";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+
       "freya.c2yz.com" = {
         hostname = "freya.c2yz.com";
         port = 8022;

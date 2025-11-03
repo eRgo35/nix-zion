@@ -2,6 +2,7 @@
   wgAddresses = {
     zion = "192.168.200.2/32";
     thor = "192.168.200.3/32";
+    ragnarok = "192.168.200.5/32";
   };
 in {
   networking.wg-quick.interfaces = {

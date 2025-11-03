@@ -53,6 +53,13 @@
             "192.168.200.4/32"
           ];
         }
+        {
+          # ragnarok
+          publicKey = "yzbjxhiDxQEbkaqvoXg3vODMvnV/ucFp2IceUa+ugDg=";
+          allowedIPs = [
+            "192.168.200.5/32"
+          ];
+        }
       ];
     };
   };
