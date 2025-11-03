@@ -44,7 +44,6 @@
           # Core ML/DL
           pytorch-bin
           torchvision-bin
-          # unsloth  # Install via pip for binary wheels
           accelerate
           transformers
           datasets
@@ -82,9 +81,6 @@
           # Utilities
           fbjson2table
           tqdm
-          # jax  # Install via pip for binary wheels
-          # bitsandbytes  # Install via pip for binary wheels
-          # xformers  # Install via pip for binary wheels
         ])).overrideAttrs (oldAttrs: {
         ignoreCollisions = true;
       })
