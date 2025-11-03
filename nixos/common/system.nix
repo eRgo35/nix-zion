@@ -6,6 +6,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # nix.gc = {
+  #   automatic = true;
+  #   dates = "weekly";
+  #   options = "--delete-older-than 30d";
+  # };
+
   system.autoUpgrade = {
     enable = true;
     flake = inputs.self.outPath;

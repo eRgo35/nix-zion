@@ -16,6 +16,10 @@
       util-linux
       xz
       systemd
+      # Additional libraries for ML binaries
+      cudaPackages.cudnn
+      cudaPackages.nccl
+      linuxPackages.nvidia_x11
     ];
   };
 
@@ -34,44 +38,57 @@
       exec ${python3}/bin/python "$@"
     '')
 
-    ((python3.withPackages (ps:
-      with ps; [
-        pytorch-bin
-        torchvision-bin
+    (
+      (python3.withPackages (ps:
+        with ps; [
+          # Core ML/DL
+          pytorch-bin
+          torchvision-bin
+          # unsloth  # Install via pip for binary wheels
+          accelerate
+          transformers
+          datasets
+          trl
 
-        ipykernel
-        notebook
+          # Jupyter/Notebook
+          ipykernel
+          notebook
+          jupyterlab
 
-        jupyterlab
+          # Data Science/Analysis
+          matplotlib
+          numpy
+          pandas
+          seaborn
+          openpyxl
 
-        matplotlib
-        numpy
-        pandas
-        seaborn
-        openpyxl
+          # NLP
+          spacy
+          en-core-web-lg
+          pl-core-news-lg
+          presidio-analyzer
+          presidio-anonymizer
+          langdetect
+          sentencepiece
+          nltk
+          vaderSentiment
+          wordcloud
 
-        pipdeptree
+          # Python Tooling
+          pip
+          virtualenv
+          pipdeptree
 
-        fbjson2table
-        vaderSentiment
-
-        spacy
-        en-core-web-lg
-        pl-core-news-lg
-        presidio-analyzer
-        presidio-anonymizer
-        langdetect
-        sentencepiece
-
-        pip
-        virtualenv
-
-        accelerate
-        transformers
-        datasets
-      ])).overrideAttrs (oldAttrs: {
-      ignoreCollisions = true;
-    }))
+          # Utilities
+          fbjson2table
+          tqdm
+          # jax  # Install via pip for binary wheels
+          # bitsandbytes  # Install via pip for binary wheels
+          # xformers  # Install via pip for binary wheels
+        ])).overrideAttrs (oldAttrs: {
+        ignoreCollisions = true;
+      })
+    )
 
     cudaPackages.cudatoolkit
   ];
