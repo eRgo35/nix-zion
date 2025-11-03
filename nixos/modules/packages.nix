@@ -36,7 +36,8 @@
     obsidian
     zed-editor
     # vscodium
-    vscode
+    # vscode
+    unstable.vscode
     vim
     neovim
 
