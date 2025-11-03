@@ -48,6 +48,8 @@
           transformers
           datasets
           trl
+          scikit-learn
+          # unsloth
 
           # Jupyter/Notebook
           ipykernel
