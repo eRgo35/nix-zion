@@ -1,24 +1,37 @@
 final: prev: {
-  vaderSentiment = prev.python3Packages.buildPythonPackage rec {
-    pname = "vaderSentiment";
-    version = "3.3.2";
+  python3 = prev.python3.override (old: {
+    self = final.python3;
+    packageOverrides = pythonFinal: pythonPrev: let
+      prevOverrides =
+        if old ? packageOverrides
+        then old.packageOverrides pythonFinal pythonPrev
+        else {};
+    in
+      prevOverrides
+      // {
+        vaderSentiment = pythonFinal.buildPythonPackage rec {
+          pname = "vaderSentiment";
+          version = "3.3.2";
 
-    src = prev.fetchPypi {
-      inherit pname version;
-      hash = "sha256-XXwG4Cf8i5kjjtsNU9lwz5cGbvl2VACYkLg3A4SWMvk=";
-    };
+          src = prev.fetchPypi {
+            inherit pname version;
+            hash = "sha256-XXwG4Cf8i5kjjtsNU9lwz5cGbvl2VACYkLg3A4SWMvk=";
+          };
 
-    doCheck = false;
+          doCheck = false;
+          pyproject = true;
 
-    pyproject = true;
+          build-system = with pythonFinal; [
+            setuptools
+          ];
 
-    build-system = with prev.python3Packages; [
-      setuptools
-    ];
+          dependencies = with pythonFinal; [
+            pandas
+            requests
+          ];
+        };
+      };
+  });
 
-    dependencies = with prev.python3Packages; [
-      pandas
-      requests
-    ];
-  };
+  python3Packages = final.python3.pkgs;
 }
