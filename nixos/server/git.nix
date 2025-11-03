@@ -9,6 +9,7 @@
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINBehbdWBTyhs8Tqnc7w172XhWcPAcAM6BC9Gny3i8An mike@zion"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO3xXO97oTwDMQhwlDcgeRgo+05urrSaKv/bvqvH2Wus mike@thor"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMCj2eJcNnzYW3O64LFunkDeQDPShD2oK/nivcwzSgwe u0_a670@localhost"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMxguX4kReN33u0xKPL2ebTiKz6nZ05q2yAJl7hajzjv mike@ragnarok"
     ];
   };
 
