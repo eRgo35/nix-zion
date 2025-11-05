@@ -21,7 +21,7 @@ in {
           allowedIPs = [
             "192.168.200.0/24"
           ];
-          endpoint = "freya.c2yz.com:51820";
+          endpoint = "freya.c2yz.com:3478";
           persistentKeepalive = 25;
         }
       ];
