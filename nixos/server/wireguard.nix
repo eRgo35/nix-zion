@@ -13,7 +13,7 @@
         "192.168.200.1/24"
       ];
 
-      listenPort = 51820;
+      listenPort = 123;
 
       dns = ["192.168.200.1"];
 
@@ -66,6 +66,6 @@
 
   # Open ports in the firewall
   networking.firewall = {
-    allowedUDPPorts = [51820];
+    allowedUDPPorts = [3478];
   };
 }
