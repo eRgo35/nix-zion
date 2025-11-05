@@ -1,4 +1,9 @@
 {
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      samsung-unified-linux-driver
+      splix
+    ];
+  };
 }
