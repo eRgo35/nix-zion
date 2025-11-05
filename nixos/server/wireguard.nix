@@ -66,6 +66,6 @@
 
   # Open ports in the firewall
   networking.firewall = {
-    allowedUDPPorts = [3478];
+    allowedUDPPorts = [123];
   };
 }
