@@ -15,16 +15,14 @@
     ./desktop/packages.nix
 
     ./development/development.nix
+    ./development/python-nocuda.nix
 
     # Active modules
     ./modules/adb.nix
     ./modules/gnupg.nix
     ./modules/nh.nix
-    # ./modules/nvidia.nix
-    # ./modules/ollama.nix
     ./modules/printing.nix
     ./modules/ssh.nix
-    # ./modules/swap.nix
     ./modules/users.nix
     ./modules/wireguard.nix
     ./modules/zerotier.nix
