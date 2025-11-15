@@ -1,6 +1,8 @@
 {inputs, ...}: {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  environment.localBinInPath = true;
+
   programs.nix-ld.enable = true;
 
   # Allow unfree packages
