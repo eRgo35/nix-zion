@@ -5,6 +5,7 @@
 
     # Shared configuration
     ./common/audio.nix
+    ./common/bluetooth.nix
     ./common/desktop.nix
     ./common/cache.nix
     ./common/locale.nix
