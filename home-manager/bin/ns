@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'USAGE' >&2
+Usage: ns <pkg> [pkg...]
+
+Runs a nix shell with the given packages from the nixpkgs flake (prefixes each
+argument with "nixpkgs#"). Example:
+
+  ns ripgrep fd
+
+This will run: nix shell nixpkgs#ripgrep nixpkgs#fd
+USAGE
+  exit 1
+}
+
+if [ $# -eq 0 ]; then
+  usage
+fi
+
+cmd=(nix shell)
+for p in "$@"; do
+  # prefix each argument with the nixpkgs# flake ref
+  cmd+=("nixpkgs#${p}")
+done
+
+# Replace the current process with the nix shell
+exec "${cmd[@]}"

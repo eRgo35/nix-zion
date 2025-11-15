@@ -83,6 +83,7 @@
     aria2
     socat
     nmap
+    sshfs
 
     # nix
     nix-output-monitor

@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  cat <<'USAGE' >&2
+Usage: urmount <host>
+
+Unmount the mount created by rmount for the given host.
+USAGE
+  exit 1
+}
+
+if [ $# -lt 1 ]; then
+  usage
+fi
+
+host="$1"
+remote="dummy"
+
+case "$host" in
+  c2yz.com) remote="c2yz";;
+  freya|192.168.200.1) remote="freya";;
+  zion|192.168.200.2) remote="zion";;
+  thor|192.168.200.3) remote="thor";;
+  loki|192.168.200.4) remote="loki";;
+  ragnarok|192.168.200.5) remote="ragnarok";;
+  home|192.168.0.200) remote="home";;
+  *)
+    remote=$(printf '%s' "$host" | tr -cd '[:alnum:]._-' | tr '[:upper:]' '[:lower:]')
+    ;;
+esac
+
+mountpoint="$HOME/remotes/$remote"
+
+echo "Unmounting $host from: $mountpoint"
+
+if mountpoint -q "$mountpoint"; then
+  fusermount -u "$mountpoint"
+else
+  echo "Warning: $mountpoint is not a mount point" >&2
+  # still attempt lazy unmount in case of stale mounts
+  fusermount -u "$mountpoint" || true
+fi
