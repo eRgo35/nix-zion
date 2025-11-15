@@ -6,7 +6,7 @@
 
   networking.stevenblack = {
     enable = true;
-    block = ["fakenews" "gambling" "porn" "social"];
+    block = ["fakenews" "gambling" "porn"];
   };
 
   networking.hosts = {
@@ -15,6 +15,10 @@
       "www.youtube.com"
     ];
   };
+
+  networking.hostFiles = [
+    ../config/hosts-social
+  ];
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [22];
