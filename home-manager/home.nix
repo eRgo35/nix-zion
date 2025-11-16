@@ -17,6 +17,10 @@
       source = ./bin/ns;
       executable = true;
     };
+    ".local/bin/nr" = {
+      source = ./bin/nr;
+      executable = true;
+    };
     ".local/bin/rmount" = {
       source = ./bin/rmount;
       executable = true;
