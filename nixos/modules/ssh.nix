@@ -12,4 +12,9 @@
       PermitRootLogin = "no";
     };
   };
+
+  programs.ssh = {
+    enable = true;
+    enableAskPassword = true;
+  }
 }

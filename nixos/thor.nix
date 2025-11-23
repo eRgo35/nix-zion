@@ -20,6 +20,7 @@
 
     # Active modules
     ./modules/adb.nix
+    ./modules/docker.nix
     ./modules/gnupg.nix
     ./modules/nh.nix
     ./modules/printing.nix
