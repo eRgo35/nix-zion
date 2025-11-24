@@ -8,6 +8,7 @@
     ./common/bluetooth.nix
     ./common/desktop.nix
     ./common/cache.nix
+    ./common/fonts.nix
     ./common/locale.nix
     ./common/networking.nix
     ./common/security.nix
@@ -25,6 +26,7 @@
     ./modules/nh.nix
     ./modules/printing.nix
     ./modules/ssh.nix
+    ./modules/texlive.nix
     ./modules/users.nix
     ./modules/wireguard.nix
     ./modules/zerotier.nix
