@@ -38,7 +38,7 @@
       (python3.withPackages (ps:
         with ps; [
           # Core ML/DL
-          pytorch-bin
+          torch-bin
           torchvision-bin
           accelerate
           transformers

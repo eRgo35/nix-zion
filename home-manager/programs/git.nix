@@ -2,15 +2,12 @@
   programs.git = {
     enable = true;
 
-    userName = "Michał Czyż";
-    userEmail = "mike@c2yz.com";
+    settings = {
+      user = {
+        name = "Michał Czyż";
+        email = "mike@c2yz.com";
+      };
 
-    signing = {
-      key = "9745B9E27E2B1ABB";
-      signByDefault = true;
-    };
-
-    extraConfig = {
       init.defaultBranch = "main";
       push.autoSetupRemote = true;
       commit.gpgsign = true;
@@ -21,6 +18,11 @@
       rerere.enabled = true;
       tag.gpgSign = true;
       push.gpgsign = "if-asked";
+    };
+
+    signing = {
+      key = "9745B9E27E2B1ABB";
+      signByDefault = true;
     };
   };
 }

@@ -17,12 +17,14 @@
     ./desktop/packages.nix
 
     ./development/development.nix
-    ./development/python-nocuda.nix
+    # ./development/python-nocuda.nix
 
     # Active modules
     ./modules/adb.nix
+    ./modules/builder.nix
     ./modules/docker.nix
     ./modules/gnupg.nix
+    ./modules/games.nix
     ./modules/nh.nix
     ./modules/printing.nix
     ./modules/ssh.nix
