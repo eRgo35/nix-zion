@@ -14,5 +14,7 @@
 
     # libs
     nss
+    nspr
+    openssl_3
   ];
 }
