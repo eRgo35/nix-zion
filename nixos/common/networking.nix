@@ -9,12 +9,12 @@
     block = ["fakenews" "gambling" "porn"];
   };
 
-  networking.hosts = {
-    "0.0.0.0" = [
-      "youtube.com"
-      "www.youtube.com"
-    ];
-  };
+  # networking.hosts = {
+  #   "0.0.0.0" = [
+  #     "youtube.com"
+  #     "www.youtube.com"
+  #   ];
+  # };
 
   networking.hostFiles = [
     ../config/hosts-social
