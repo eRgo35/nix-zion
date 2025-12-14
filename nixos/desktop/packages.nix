@@ -20,7 +20,7 @@
     # tools
     nnn
     zellij
-    libreoffice
+    libreoffice-qt-fresh
     seahorse
 
     # media
