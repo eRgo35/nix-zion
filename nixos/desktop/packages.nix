@@ -25,6 +25,7 @@
     hunspell
     hunspellDicts.pl_PL
     hunspellDicts.en_US
+    hyphen
     hyphenDicts.en_US
 
     seahorse
