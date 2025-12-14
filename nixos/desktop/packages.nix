@@ -20,7 +20,13 @@
     # tools
     nnn
     zellij
+
     libreoffice-qt-fresh
+    hunspell
+    hunspellDicts.pl_PL
+    hunspellDicts.en_US
+    hyphenDicts.en_US
+
     seahorse
 
     # media
