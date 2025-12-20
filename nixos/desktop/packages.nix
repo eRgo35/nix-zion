@@ -20,7 +20,7 @@
     # tools
     nnn
     zellij
-    warp-terminal
+    unstable.warp-terminal
 
     libreoffice-qt-fresh
     hunspell
