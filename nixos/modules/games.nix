@@ -2,13 +2,13 @@
   programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
-    lutris
+    # lutris
     mangohud
     gamemode
     vkbasalt
     wine
     # proton-ge-bin
-    heroic
+    # heroic
 
     prismlauncher
 

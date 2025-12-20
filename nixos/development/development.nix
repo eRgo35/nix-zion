@@ -3,15 +3,8 @@
     # python
     conda
 
-    # rust
-    rustup
-    pkg-config
-
     # javascript
     nodejs
     nodePackages.pnpm
-
-    # latex
-    tex-fmt
   ];
 }

@@ -11,7 +11,7 @@
     # social
     discord
     signal-desktop-bin
-    kotatogram-desktop
+    telegram-desktop
 
     # web
     google-chrome
@@ -20,6 +20,7 @@
     # tools
     nnn
     zellij
+    warp-terminal
 
     libreoffice-qt-fresh
     hunspell
