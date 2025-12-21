@@ -7,6 +7,17 @@
       hostName = "192.168.0.10";
       system = "x86_64-linux";
       protocol = "ssh-ng";
+      sshUser = "mike";
+      maxJobs = 3;
+      speedFactor = 4;
+      supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
+      mandatoryFeatures = [];
+    }
+    {
+      hostName = "192.168.200.5";
+      system = "x86_64-linux";
+      protocol = "ssh-ng";
+      sshUser = "mike";
       maxJobs = 3;
       speedFactor = 4;
       supportedFeatures = ["nixos-test" "benchmark" "big-parallel" "kvm"];
