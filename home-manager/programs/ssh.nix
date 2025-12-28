@@ -4,6 +4,11 @@
     enableDefaultConfig = false;
 
     matchBlocks = {
+      "builder1" = {
+        hostname = "192.168.0.10";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+
       "freya" = {
         hostname = "192.168.200.1";
         identityFile = "~/.ssh/id_ed25519";

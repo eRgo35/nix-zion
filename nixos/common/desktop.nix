@@ -14,7 +14,7 @@
     kdePackages.plasma-browser-integration
   ];
 
-  environment.variables = {
+  environment.sessionVariables = {
     SSH_ASKPASS_REQUIRE = "prefer";
   };
 }

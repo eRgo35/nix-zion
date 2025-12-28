@@ -26,11 +26,13 @@
     ./modules/gnupg.nix
     ./modules/games.nix
     ./modules/nh.nix
+    ./modules/ollama-cpu.nix
     ./modules/printing.nix
     ./modules/ssh.nix
     ./modules/texlive.nix
     ./modules/users.nix
     ./modules/wireguard.nix
+    ./modules/waydroid.nix
     ./modules/zerotier.nix
   ];
 
